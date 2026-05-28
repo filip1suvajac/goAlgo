@@ -1,24 +1,24 @@
 # goAlgo
 
-Prvi (vadbeni) projekt z WASM - vizualizacija algoritmov sortiranja v React + C++.
+WASM project - sorthing algorithm visualization in React and C++.
 
-UI je narejen v Reactu + TypeScriptu, algoritmi pa so napisani v C++ in prevedeni v WebAssembly.
+The UI is built with React and TypeScript, while the sorting algorithms are written in C++ and compiled to WebAssembly.
 
-## Kaj dela
+## Features
 
-- vnos svojega arraya števil
-- generiranje random arraya
-- izbira algoritma:
+- custom number array input
+- random array generation
+- sorting algorithm selection:
   - Bubble Sort
   - Selection Sort
   - Insertion Sort
   - Quick Sort
-- animacija sortiranja
-- korak nazaj/korak naprej po algoritmu
+- sorting animation
+- step backward / step forward
 - reset
-- nastavitev hitrosti animacije
-- prikaz števila primerjav in zamenjav
-- kratek opis izbranega algoritma
+- animation speed control
+- comparison and swap counter
+- short description of the selected algorithm
 
 ## Tech
 
@@ -37,7 +37,7 @@ npm install
 
 ## Emscripten
 
-Za build C++ kode rabiš Emscripten (`emcc`).
+To build the C++ code, Emscripten (`emcc`) is required.
 
 ```bash
 git clone https://github.com/emscripten-core/emsdk.git
@@ -47,7 +47,7 @@ cd emsdk
 source ./emsdk_env.sh
 ```
 
-Preveri:
+Check installation:
 
 ```bash
 emcc --version
@@ -55,13 +55,13 @@ emcc --version
 
 ## Build WASM
 
-Iz root folderja projekta:
+From the project root folder:
 
 ```bash
 npm run build:wasm
 ```
 
-To zgenerira WASM datoteke v:
+This generates WASM files in:
 
 ```text
 public/wasm/
@@ -73,7 +73,7 @@ public/wasm/
 npm run dev
 ```
 
-Vite potem izpiše lokalni URL, npr:
+Vite will print a local URL, for example:
 
 ```text
 http://localhost:5173
